@@ -27,5 +27,11 @@
       - Les Data
   ## Software As A Service(SaaS):
     - L'entreprise ne fait que s'enregistrer sur la SaaS seulement et l'utilise.
+
+# Les avantages du Cloud
+  ## Payement à l'usage(CAPEX ---> OPEX)
+    -
+      
+
     
       
