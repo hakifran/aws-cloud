@@ -41,6 +41,31 @@
   - Avec le cloud on arrete de dépense de l'argent et du temps sur l'infrastrure, plutot on se concentre plus sur nos projets ce qui permet d'innover nos projet parce qu'on a plus de temps.
   ## Déploiement mondial en quelques minutes: 
   - Les fournisseurs cloud ont des serveurs partout dans le monde(Dans toutes les regions), ce qui permet d'avoir une visibilité rapide au niveau mondiale et vous permettent de déployer facilement vos applications dans plusieurs régions d’un simple clic.
+
+# Introduction au cloud AWS
+  ## Présentation d’AWS
+  - **AWS(Amazon Web Service)** est une plateforme de service du cloud computing offert par **AMAZON** et permet de payer uniquement les services que l'on utilise
+  - Cette plateforme offre une game de services du cloud computing:
+    - Stockage des données
+    - Traitement des données
+    - La securité
+    - La mise en réseau
+    - La livraison de contenu
+    - L'Intelligence Artificielle
+    - Les outils de développement et de déploiement d'applications
+  ## L’Infrastructure globale
+  - Il faut savoir que AWS possede des centres de données qui regroupe dans des **régions**.
+  - **Une région** est un emplacement physique sur lequel on peut déployer des applications ou stoquer des données.
+  - AWS possède plusieurs régions sur toutes l'étendu du globe.
+  - Une région est composé de **zones de disponibilités(Avaibility Zone)**, dans la plus part des cas elles(AZ) sont au nombre de 3(minimum) pour une région
+  - Une **Zone de disponibilité(Aivability zone)** est un centre de donnée(Data Center) à part et independant. Les zones de disponibilités dans une même région sont éloignés les uns des autres pour question de sécurité. Pour que si une d'entre elles a un soucis pour que les autres prennent la releve
+  - AWS a aussi des **Edges Locations** qui jouent le rôle de cache pour diminuer le temps de latence. Les Edge Location sont placé partout dans le monde pour permettre de faire du caching des applications déployées dans les régions.
+  - Il existe aussi des **zones locales**. Les zones locales sont de mini-data-center qui sont placées tout près des métropoles(Zones très habitées et où il y a de forte activité économiques) pour permettre à ces métropoles d'avoir accès au services offertes par AWS avec moin de latence.
+  - **Les critères à prendre en compte pour choisir une région**:
+    - **Latence**: Il faut choisir la région qui soit la plus proche de la population cible pour réduire au maximum le temps de latence
+    - **Prix**: Les prix des services offerte par AWS varient selon les régions
+    - **Disponibilités des services**: Les services ne sont pas disponibles dans toutes les régions. Pour un service donnée, elle peut être disponible dans la région A et ne pas l'être dans la région B.
+    - **Conformité**: la réglementation peut vous obliger à localiser vos données dans une zone géographique précise
      
 
     
