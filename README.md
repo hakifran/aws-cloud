@@ -58,7 +58,7 @@
   - **Une région** est un emplacement physique sur lequel on peut déployer des applications ou stoquer des données.
   - AWS possède plusieurs régions sur toutes l'étendu du globe.
   - Une région est composé de **zones de disponibilités(Avaibility Zone)**, dans la plus part des cas elles(AZ) sont au nombre de 3(minimum) pour une région
-  - Une **Zone de disponibilité(Aivability zone)** est un centre de donnée(Data Center) à part et independant. Les zones de disponibilités dans une même région sont éloignés les uns des autres pour question de sécurité. Pour que si une d'entre elles a un soucis pour que les autres prennent la releve
+  - Une **Zone de disponibilité(Aivability zone)** est un centre de donnée(Data Center) à part et independant. Les zones de disponibilités dans une même région sont éloignés les uns des autres pour question de sécurité et sont liées entre elle via des liasons à faible latence. Pour que si une d'entre elles a un soucis pour que les autres prennent la releve
   - AWS a aussi des **Edges Locations** qui jouent le rôle de cache pour diminuer le temps de latence. Les Edge Location sont placé partout dans le monde pour permettre de faire du caching des applications déployées dans les régions.
   - Il existe aussi des **zones locales**. Les zones locales sont de mini-data-center qui sont placées tout près des métropoles(Zones très habitées et où il y a de forte activité économiques) pour permettre à ces métropoles d'avoir accès au services offertes par AWS avec moin de latence.
   - **Les critères à prendre en compte pour choisir une région**:
@@ -66,6 +66,17 @@
     - **Prix**: Les prix des services offerte par AWS varient selon les régions
     - **Disponibilités des services**: Les services ne sont pas disponibles dans toutes les régions. Pour un service donnée, elle peut être disponible dans la région A et ne pas l'être dans la région B.
     - **Conformité**: la réglementation peut vous obliger à localiser vos données dans une zone géographique précise
+  ## Démarrer sur AWS:
+  - Pour démarrer sur AWS il d'abord s'inscrire et les informations suivantes sont demandées:
+    - L'adresse email
+    - Un mot de passe
+    - Un numéro de téléphone
+    - Une carte bancaire pour le paiement
+  - Une fois inscrit on peut se connecter à AWS
+  - Il existe trois moyens d'utiliser les services AWS:
+    - **AWS management Console**: Via l'espace web de AWS on peut utiliser les services
+    - **AWS CLI(Command Line Interface)**: Via un terminal on peut utiliser les services AWS au travers des commandes qui sont executé par un interpretteur de AWS. Mais il faut être authentifié via une clé d'accès AWS
+    - ***AWS SDK(Software Development Kit)**: Un kit(packages) de développement des logiciels utilisé par les developpeurs pour avoir accès aux services AWS via du code(Python, Ruby etc...)
      
 
     
