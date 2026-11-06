@@ -31,4 +31,21 @@
    - Il faut savoir qu'une instance EC2 sur un serveur virtuel se trouve dans un subnet(sous-réseau), et le subnet se trouve dans un VPC(Virtual Private Cloud)
    - A l'interieur du VPC-subnet le EC2 est identifier par une adresse IP privée qui ne change pas et qui permet à ce dernier de communiquer avec les autres EC2 se trouvant dans le même VPC.
    - Cette adresse privée ne permet en aucun cas au EC2 de communiquer avec l'exterieur(internet). Pour communiquer avec l'exterieur(internet) une adresse publique lui est alloué mais ce dernier change si par exemple l'instance EC2 est redemarrée. Pour éviter que cette IP publique ne change pas à chaque fois une **Elastic IP adress** lui est alloué et ce dernier ne change pas.
-5. **
+5. **Paire de clés(Key pair)**:
+   - Pour pouvoir accèder à une instance EC2 via **SSH(Secure Shell)** pour linux ou **RDP(Remote Desktop Protocol)** une paire de clé est nécessaire pour l'authentification:
+     - Clé privée que l'utilisateur va sauvegarde jalousement car elle est très sensible en terme de sécurité pour l'instance EC2
+     - Clé public qui est sauvegardé dans l'instance EC2
+     - Pour linux, l'utilisateur fourni la clé privé à la commande SSH et l'instance EC2 se charge de vérifier si la clé privé correspond à la clé publique dans l'instance EC2
+     - Pour windows, le clé privée est fourni par l'utilisateur et avec le clé publique ça permet de déchiffre le mot de passe pour pouvoir accèder à l'EC2
+6. **Groupe de Sécurité(Security Group)**:
+   - Pour des raisons de sécutité pour l'instance EC2, une sorte de parefeux(Firewall) est obligatoire pour gérer les flux(**Inbound**) qui entrent et les flux(**OutBound**) qui sortent
+   - Pour ce faire une liste de règles(**Rules**) est établi afin de controller au mieux les flux entrant et les flux sortant de l'instance EC2
+   - Les Rules sont composés:
+     - Type: SSH, HTTP, HTTPS, etc...
+     - Protocol: TCP, UDP, etc...
+     - Ports
+     - Source: Les adresses IP, si cette valeur est 0.0.0.0 cela signifie que toutes les adresses sont permises d'envoyer des requettes
+   - Les groupes de securités ne supportent que les règles **ALLOw** alors que **Deny** est implicite
+7. **USER DATA**:
+   - Les user data est un inscript qui est défini avant la création d'un EC2 pour que ce script soit executé au lancement de l'instance EC2
+   - Le script peut être pour l'installation d'une librairie, d'un server etc...
