@@ -27,6 +27,7 @@
    - Toutes ces caracteristiques sont regroupés dans des packages qu'on appelle des types d'instance
    - Un type d'instance est choisi selon la taille des calculs que l'instance aura à executé. Il faut faire attention parce que selon la taille du vCPU, RAM etc...les prix augmentent
    - Il faut aussi savoir que le prix des type d'instance varie selon les régions sur AWS
+   - **Il est possible de change le type d'instance selon que les besoins en capacités ont augmentés ou diminué. Pour cela il faut le stop imperativement et le redemarrer après le changement du type**
 4. **Adresse IP**:
    - Il faut savoir qu'une instance EC2 sur un serveur virtuel se trouve dans un subnet(sous-réseau), et le subnet se trouve dans un VPC(Virtual Private Cloud)
    - A l'interieur du VPC-subnet le EC2 est identifier par une adresse IP privée qui ne change pas et qui permet à ce dernier de communiquer avec les autres EC2 se trouvant dans le même VPC.
@@ -46,6 +47,7 @@
      - Ports
      - Source: Les adresses IP, si cette valeur est 0.0.0.0 cela signifie que toutes les adresses sont permises d'envoyer des requettes
    - Les groupes de securités ne supportent que les règles **ALLOw** alors que **Deny** est implicite
+   - **Il possible de modifier un groupe de sécurité(enlever ou ajouter) sans toute fois stop et redemarrer l'instance EC2**
 7. **USER DATA**:
    - Les user data est un inscript qui est défini avant la création d'un EC2 pour que ce script soit executé au lancement de l'instance EC2
    - Le script peut être pour l'installation d'une librairie, d'un server etc...
