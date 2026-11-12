@@ -60,6 +60,18 @@
       - Pour tester les services
  2. **On demand(Pay as you Go)**:
     - Pour ce genre de tarification l'abonné ne s'engage en rien, il utilise les services de AWS sans engagement
-    - Et AWS facture l'utilisation des ses services par sec ou par minutes
+    - Et AWS facture l'utilisation des ses services par sec ou par heures(paiement à la seconde ou à l'heure)
     - Cas d'utilisation:
-      - Pour des projets dont on 
+      - Pour des projets dont l'utilisateur ne veut pas s'engage avec AWS
+      - Les charges de travail à court terme ou imprévisible
+      - Les applications développées ou testées pour la 1ere fois.
+ 3. **Savings plans**:
+    - Pour ce genre de tarification l'abonné s'engage et signe un contrat avec AWS pour l'utilisation de ses services
+    - Avec ce dernier une reduction de 72% par rapport à **on demand**
+    - L'engagement se fait sur 1 ou 3 ans
+    - L'engagement est mesuré en $/heure
+    - Les options de paiement sont: No Upfront(pas de paiement du tout à l'avance), partial upfront(une partie à l'avance et l'autre durant l'utilisation), all upfront(paiement tout à l'avance)
+    - Recommandé pour:
+      - application en production avec une utilisation stable
+      - Base de donnée avec usage constant
+      
