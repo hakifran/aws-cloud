@@ -51,3 +51,15 @@
 7. **USER DATA**:
    - Les user data est un inscript qui est défini avant la création d'un EC2 pour que ce script soit executé au lancement de l'instance EC2
    - Le script peut être pour l'installation d'une librairie, d'un server etc...
+## Tarifications:
+ 1. **Offre gratuits**:
+    - AWS met à la disposition certains services gratuits à un nouveau abonné pour une durée de 12 mois
+    - Il faut savoir que la limite de la gratuite est de 750 heures par mois, une fois les 750 heures gratuits utilisés, AWS commence à facture l'excédent
+    - Après les 12 mois AWS commence à facturer tous ses services une fois utilisé
+    - Cas d'utilisation:
+      - Pour tester les services
+ 2. **On demand(Pay as you Go)**:
+    - Pour ce genre de tarification l'abonné ne s'engage en rien, il utilise les services de AWS sans engagement
+    - Et AWS facture l'utilisation des ses services par sec ou par minutes
+    - Cas d'utilisation:
+      - Pour des projets dont on 
