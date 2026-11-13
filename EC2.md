@@ -74,4 +74,20 @@
     - Recommandé pour:
       - application en production avec une utilisation stable
       - Base de donnée avec usage constant
+  4. **Dedicated hosts**:
+     - Les dedicated hosts permettent de louer un serveur physique qui soit exclusivement dédié à un compte AWS
+     - Les dedicated hosts permettent d'avoir le contrôle sur le placement des instances EC2 sur le serveur
+     - ça permet aussi d'avoir la visibilité sur nombre de sockets et de coeurs physiques
+     - Recommandé pour:
+       - Utilisation de licences logicielles existantes par socket, core ...(Windows Server, SQL server, RHEL, ...)
+       - (Conformité) charges de travail qui requièrent des serveurs physiques dédiés.
+  5. **Instances spot**:
+     - Sur les serveurs AWS il advient qu'il y a de l'espace non utilisé d'instances EC2 non utilisé
+     - Alors AWS les mets au enchère pour l'utilisation de cette espace(charge non utilisé) et les clients de AWS peuvent proposer les prix pour les loués pendant une certain temps.
+     - Les prix sont réduits à plus de 90% par rapport au tarif de l'on-demand
+     - Mais ça une inconvenient car à tout moment AWS peut décider de reprendre l'espace(Spot) loués et un temps de 2min de notification est donné au client avant de remprendre l'espace spot alloué
+     - Recommandé pour:
+       - Les applications tolérantes aux interruptions / pannes
+       - Applications non critiques: Big Data, CI/CD, environnements de tests
+       
       
