@@ -89,5 +89,6 @@
      - Recommandé pour:
        - Les applications tolérantes aux interruptions / pannes
        - Applications non critiques: Big Data, CI/CD, environnements de tests
-       
+## EC2 AutoScaling & Elastic Load Balancer:
+  1. **Scaling
       
