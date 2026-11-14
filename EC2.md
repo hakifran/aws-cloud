@@ -90,5 +90,29 @@
        - Les applications tolérantes aux interruptions / pannes
        - Applications non critiques: Big Data, CI/CD, environnements de tests
 ## EC2 AutoScaling & Elastic Load Balancer:
-  1. **Scaling
+  1. **Scalability(mise à l'échelle)**:
+     - La mise à l'échelle(Scalability) est la capacité d'un système, d'un logiciel à s'adapter à l'augmention ou à la diminution de la charge de travail sans interruption ou panne.En d’autres termes, la scalabilité est la capacité d’un système à évoluer de manière transparente pour répondre aux besoins croissants de ses utilisateurs sans subir de perte de performance ou d’interruption de service.
+     - Il existe deux sorte de mise à l'échelle(scalability):
+       - **Scalability verticale**: on augmente la taille(capacité) d'une instance
+       - **Scalability horizontale**: On ajouter les instances pour gérer des charges de travail plus importantes.
+  2. **Haute disponibilité**:
+     - La haute disponibilité est la capacité qu'a un système à rester disponible et à fonctionner normalement même en cas de défaillance matérielle ou logicielle
+  3. **EC2 AUTO scaling Group**:
+     - L'EC2 Auto Scaling Group est un outil de AWS qui permet d'ajuster automatiquement le nombre de serveurs en fonction de la charge de travail. Il permet d'ajouter ou de supprimer des serveurs selon que la charge de travail est accrue ou réduit
+     - La configuration de l'EC2 auto scaling se base sur trois nombre:
+       - **La capacité souhaité**: c'est le nombre de serveur dont on pense qu'il va permettre à un site web de bien fonctionner
+       - **La capacité maximale**: C'est le nombre de serveurs maximale qu'il faudra avoir en cas d'accroissement de la charge
+       - **La capacité minimale**: C'est le nombre de serveurs minimal qu'il faut garder en cas de réduction de la charge de travail
+     - **Les stratégies auto scaling**:
+       - **Stratégie dynamique**: On définit une règle qui une fois rempli va déclenche l'augmentation ou la diminution du nombre de serveur par l'auto scaling groug. Par exemple augmenter le nombre de serveurs une fois que l'utilisation du CPU > 90% ou diminuer le nombre de serveurs si le traffic réseau < 20 %
+       - **Stratégie prédictif**: L'augmentation ou la diminution des serveurs se base sur des modèles du machine learning qui se basent sur les données historiques de l'utilisation du site web par exemple
+ 4. **Elastic Load Balancer**:
+    - Une fois qu'il y a plusieurs serveurs via l'auta scaling Group, il faut qu'il y est un mécanisme pour repartir la charge de travail entre ces serveurs.
+    - L'**Elastic Load Balancer** est un outil mise en place par AWS pour crée des répartiteur de charge entre les instances EC2
+    - Il existe 4 type de repartiteur de charge:
+      - **Application Load Balancer(Couche 7)**: Http, https. Utilisé plus pour le web
+      - **Network Load Balancer(Couche 3)**: TCP/UDP. Utiliser pour répartir rapidement avec une grande capacité
+      - **Gateway Load Balancer**: Ils vous permettent de déployer, de mettre à l’échelle et de gérer des appliances virtuelles, telles que des pare-feu, des systèmes de détection et de prévention des intrusions et des systèmes d’inspection approfondie des paquets
+      - **Clasic Load Balancer(Couche 4 et couche 7)**:  Il s’agit de la version précédente des load balancers dans AWS, offrant une distribution de charge au niveau de la couche 4 et de la couche 7. Le Classic Load Balancer est déprécié par AWS, qui recommande de plutôt utiliser les autres types.
+
       
