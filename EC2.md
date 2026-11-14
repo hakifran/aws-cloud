@@ -103,6 +103,7 @@
        - **La capacité souhaité**: c'est le nombre de serveur dont on pense qu'il va permettre à un site web de bien fonctionner
        - **La capacité maximale**: C'est le nombre de serveurs maximale qu'il faudra avoir en cas d'accroissement de la charge
        - **La capacité minimale**: C'est le nombre de serveurs minimal qu'il faut garder en cas de réduction de la charge de travail
+       - L'auto scaling group peut aussi parametre un nombre fix de serveurs qu'il faut toujours garder c'est à dire que dans un cas où un serveur est en panne l'auto scaling group est capable de détecter ça et de remplacer automatiquement le serveur
      - **Les stratégies auto scaling**:
        - **Stratégie dynamique**: On définit une règle qui une fois rempli va déclenche l'augmentation ou la diminution du nombre de serveur par l'auto scaling groug. Par exemple augmenter le nombre de serveurs une fois que l'utilisation du CPU > 90% ou diminuer le nombre de serveurs si le traffic réseau < 20 %
        - **Stratégie prédictif**: L'augmentation ou la diminution des serveurs se base sur des modèles du machine learning qui se basent sur les données historiques de l'utilisation du site web par exemple
