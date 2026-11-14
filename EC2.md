@@ -116,4 +116,7 @@
       - **Gateway Load Balancer**: Ils vous permettent de déployer, de mettre à l’échelle et de gérer des appliances virtuelles, telles que des pare-feu, des systèmes de détection et de prévention des intrusions et des systèmes d’inspection approfondie des paquets
       - **Clasic Load Balancer(Couche 4 et couche 7)**:  Il s’agit de la version précédente des load balancers dans AWS, offrant une distribution de charge au niveau de la couche 4 et de la couche 7. Le Classic Load Balancer est déprécié par AWS, qui recommande de plutôt utiliser les autres types.
 
+## Architecture Multi-AZ:
+ 
+
       
