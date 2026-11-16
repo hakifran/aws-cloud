@@ -116,7 +116,11 @@
       - **Gateway Load Balancer**: Ils vous permettent de déployer, de mettre à l’échelle et de gérer des appliances virtuelles, telles que des pare-feu, des systèmes de détection et de prévention des intrusions et des systèmes d’inspection approfondie des paquets
       - **Clasic Load Balancer(Couche 4 et couche 7)**:  Il s’agit de la version précédente des load balancers dans AWS, offrant une distribution de charge au niveau de la couche 4 et de la couche 7. Le Classic Load Balancer est déprécié par AWS, qui recommande de plutôt utiliser les autres types.
 
-## Architecture Multi-AZ:
+## Architecture Multi-AZ(Availability Zone):
+ - L'architecture Multi-AZ permet d'assurer la **haute disponibilité** d'un système.
+ - Le Multi-AZ va y arriver en jouant sur la **redondance** des instances sur differentes **AZ**
+ - L'**Auto Scaling Group** a l'intelligence que quand il crée des instances il les places dans des AZ differentes
+ - Et l'**Elastic Load Balancer** s'occupe de distribuer la charge entre les differentes instances EC2 se trouvant dans differentes AZ
  
 
       
