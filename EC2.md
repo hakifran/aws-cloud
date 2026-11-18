@@ -121,6 +121,30 @@
  - Le Multi-AZ va y arriver en jouant sur la **redondance** des instances sur differentes **AZ**
  - L'**Auto Scaling Group** a l'intelligence que quand il crée des instances il les places dans des AZ differentes
  - Et l'**Elastic Load Balancer** s'occupe de distribuer la charge entre les differentes instances EC2 se trouvant dans differentes AZ
+
+# Autres services de calcul
+## Conteneurs 101
+### Qu'est ce qu'un conteneur:
+1. Un **conteneur informatique** est similaire à un conteneur physique dans lequel on met tout ce qu'on veut.
+2. Les **Conteneurs informatique** permettent de regrouper ensemble du code, des dépendances, des librairies et des fichiers de configuration dans un seul conteneur qui peut être déplacé et executé dans n'importe quel environnement.
+3. Contrairement aux machines virtuelles les conteneurs ne duplique pas les resources du système d'exploitation invité mais n'inclue que ce qui est nécessaire pour l'execution de l'application
+4. **Machine virtuelle:** Applications ---> binaire/libraries ---> Systeme d'exploitation ---> hyperviseur ---> Infrastructures
+5. **Conteneur:** Applications ---> Binaire/libraries ---> logiciel de conteneurisation ---> Infrastructure
+### Les Avantages des conteneurs:
+1. **Isolation des applications:** Les containers permettent d’isoler les applications les unes des autres, ce qui évite les conflits de dépendances et les problèmes de compatibilité. Chaque application s’exécute dans son propre environnement logiciel, ce qui permet de garantir que les modifications apportées à une application ne vont pas affecter les autres applications.
+2. **Portabilité:** Les containers sont portables et peuvent être exécutés sur n’importe quel système d’exploitation qui prend en charge les containers, ce qui facilite la migration des applications entre différents environnements. Les containers sont également plus légers que les machines virtuelles, ce qui permet de les déployer plus rapidement et plus facilement.
+3. **L'évolutivité:** Les containers permettent de mettre à l’échelle les applications horizontalement, ce qui permet de gérer les charges de travail élevées de manière plus efficace. Les nouvelles instances de l’application peuvent être ajoutées rapidement et facilement, en fonction des besoins.
+4. **Facilité de déploiement:** Les containers permettent de déployer des applications plus rapidement et plus facilement que les serveurs traditionnels. Les containers sont créés à partir d’images, qui contiennent toutes les informations nécessaires pour exécuter l’application. Cela permet de garantir la cohérence entre les environnements de développement, de test et de production.
+5. **Facilité de Gestion:** Les containers peuvent être gérés de manière centralisée à l’aide d’outils de gestion de containers tels que Docker, Kubernetes ou Amazon ECS. Cela permet de simplifier la gestion des applications et de garantir la cohérence des environnements.
+### Docker
+1. **Docker** est une plateforme open source permettant de créer, distribué et executé des applications dans des conteneurs isolés.
+2. **Docker** utilise un système de fichiers en couches pour créer des images de conteneurs. Les images de conteneurs sont des modèles qui contiennent toutes les informations nécessaires pour créer un conteneur. Une fois qu’une image de conteneur est créée, elle peut être utilisée pour créer un ou plusieurs conteneurs.
+#### CREER UN CONTENEUR DOCKER
+1. Un fichier **Dockerfile** qui contient les instructions de comment l'imade docker est formé
+2. A partir du fichier **Dockerfile** une **image docker** est créé
+3. L'**image docker** est publié sur un registre publique ou privé
+4. Et c'est à partir de là que l'image est téléchargé et puis executé en **conteneur docker**
+5. **Docker file** ---**build**--> **Docker image** ---**Run**--> **Docker conteneur**
  
 
       
