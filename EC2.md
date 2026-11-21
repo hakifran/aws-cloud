@@ -150,6 +150,17 @@
 2. **AWS EKS: Elastic Kubernetes Service**: EKS est un autre service de gestion d'orchestration des conteneurs DOCKER à la seule difference avec ECS est que EKS crée des **clusters kubernetes** dans lequels il gére les conteneurs DOCKER.
 3. **AWS Fargate**: Il faut savoir que les services d'orchestration vont gérer des conteneurs qui tourne sur de l'infrastructure qui est soit gérer par l'**EC2** ou par **Fargate**. Donc **Fargate** permet la gestion de l'infrastructure sur lequel tourne les conteneurs. Fargate étant **Serveless** on n'a pas besoin de provisionner et gérer quoi que ce soit, **Fargate** s'en n'occupe à notre place.
 4. **AWS ECR: Elastic Container Register**: Les conteneurs sont créés à partir des **Images** et les images sont stockés, versionnés et gérés dans un registre à partir duquel on peut avoir une image. Donc ECR permet de stocker, versionner et gérer les images comme **Docker hub**.
+
+## Serverless & AWS Lambda:
+1. **Serverless(Sans serveur en francais)**: est un concept de développement et de déploiement d'application qui se fait sans géstion directe des serveurs.
+2. **AWS Lambda**: est service AWS qui est serverless mais il faut s'avoir qu'il y a d'autres services AWS tel que AWS lambda, AWS S3, AWS API Gateway(pour la création des API HTTP). AWS Lambda est constitué de **fonctions** qui répondent à des évenements(**Appel HTTP, l'upload d'un fichier dans AWS, etc...**). Lorque AWS lambda reçoit un évenement il crée automatiquement un conteneur dans lequel il va éxecuté la fonction invoqué, une fois l'éxecution terminé il detruit le conteneur. 
+4. Voici une explication plus détaillée de ce que signifie le serverless sur AWS :
+   - **Absence de gestion de l'infrastructure**: Avec serverless vous n'avez plus à vous soucier de la gestion de l'infrastructure sous-jacente. AWS s'occuper automatiquement de gérer, faire des mises à jour, mettre à l'échelle, faire des correctifs. On n'a plus qu'à se concentre sur le développement de nos applications
+   - **Évolutivité automatique**: Avec les services Serverless, ils adaptent automatiquement les ressources à la charge sans qu'il y ait intervention de l'humain. Quand la charge augmente le Serverless décider d'augmenter les ressources et quand il diminue il reduit les ressources.
+   - **Paiement à l'utilisation**: Il faut savoir que le paiement pour les services Serverless se fait par invocation et la durée de l'éxecution du code et cela par millesecond
+   - **Diversité des services Serverless**: Il existe d'autre type de services serverless notamment AWS S3, AWS SQS(Simple Queu Servive), AWS Lambda, AWS API Gateway...
+   - **Facilité de développement**: On n'est plus soucié de l'infrastrure sur lequel va tourner nos applications mais plutot on se concentre sur le code et son évolution.
+  
  
 
       
