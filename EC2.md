@@ -145,6 +145,11 @@
 3. L'**image docker** est publié sur un registre publique ou privé
 4. Et c'est à partir de là que l'image est téléchargé et puis executé en **conteneur docker**
 5. **Docker file** ---**build**--> **Docker image** ---**Run**--> **Docker conteneur**
+## Conteneurs sur AWS
+1. **AWS ECS: Elastic Container Service**: Il faut savoir qu'une fois les conteneurs créés, il faut des outils de gestion et d'orchestration de ces derniers. AWS ECS est un service de AWS entièrement géné qui permet à la fois de d'orchestrer et de mettre à l'échelle les conteneurs en fonction de la demande en capacité.**ECS** s'integrer avec d'autres services AWS tel que **EC2, Fargate, Auto scaling, AWS IAM**
+2. **AWS EKS: Elastic Kubernetes Service**: EKS est un autre service de gestion d'orchestration des conteneurs DOCKER à la seule difference avec ECS est que EKS crée des **clusters kubernetes** dans lequels il gére les conteneurs DOCKER.
+3. **AWS Fargate**: Il faut savoir que les services d'orchestration vont gérer des conteneurs qui tourne sur de l'infrastructure qui est soit gérer par l'**EC2** ou par **Fargate**. Donc **Fargate** permet la gestion de l'infrastructure sur lequel tourne les conteneurs. Fargate étant **Serveless** on n'a pas besoin de provisionner et gérer quoi que ce soit, **Fargate** s'en n'occupe à notre place.
+4. **AWS ECR: Elastic Container Register**: Les conteneurs sont créés à partir des **Images** et les images sont stockés, versionnés et gérés dans un registre à partir duquel on peut avoir une image. Donc ECR permet de stocker, versionner et gérer les images comme **Docker hub**.
  
 
       
